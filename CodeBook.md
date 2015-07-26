@@ -1,7 +1,9 @@
-Getting and Cleaning Data Course Project CodeBook
+CODE BOOK: Getting and Cleaning Data Course Project
 
 This file describes the variables, the data, and any transformations performed to clean up the data.
 
+
+THE DATA
     The data was obtained from the following site:
     http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
     
@@ -9,10 +11,105 @@ This file describes the variables, the data, and any transformations performed t
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
     
     
-    The run_analysis.R script performs the following steps to clean the data:
-        Read X_train.txt, y_train.txt and subject_train.txt from the "./data/train" folder and store them in trainData, trainLabel and trainSubject variables respectively.
-        Read X_test.txt, y_test.txt and subject_test.txt from the "./data/test" folder and store them in testData, testLabel and testsubject variables respectively.
-        Concatenate testData to trainData to generate a 10299x561 data frame, joinData; concatenate testLabel to trainLabel to generate a 10299x1 data frame, joinLabel; concatenate testSubject to trainSubject to generate a 10299x1 data frame, joinSubject.
+ THE VARIABLES   
+ 
+        Identifiers
+                subject - The ID of the test subject
+                activity - The type of activity performed when the corresponding measurements were taken
+                
+                
+
+        
+        Measurements
+                tBodyAccMeanX
+                tBodyAccMeanY
+                tBodyAccMeanZ
+                tBodyAccStdX
+                tBodyAccStdY
+                tBodyAccStdZ
+                tGravityAccMeanX
+                tGravityAccMeanY
+                tGravityAccMeanZ
+                tGravityAccStdX
+                tGravityAccStdY
+                tGravityAccStdZ
+                tBodyAccJerkMeanX
+                tBodyAccJerkMeanY
+                tBodyAccJerkMeanZ
+                tBodyAccJerkStdX
+                tBodyAccJerkStdY
+                tBodyAccJerkStdZ
+                tBodyGyroMeanX
+                tBodyGyroMeanY
+                tBodyGyroMeanZ
+                tBodyGyroStdX
+                tBodyGyroStdY
+                tBodyGyroStdZ
+                tBodyGyroJerkMeanX
+                tBodyGyroJerkMeanY
+                tBodyGyroJerkMeanZ
+                tBodyGyroJerkStdX
+                tBodyGyroJerkStdY
+                tBodyGyroJerkStdZ
+                tBodyAccMagMean
+                tBodyAccMagStd
+                tGravityAccMagMean
+                tGravityAccMagStd
+                tBodyAccJerkMagMean
+                tBodyAccJerkMagStd
+                tBodyGyroMagMean
+                tBodyGyroMagStd
+                tBodyGyroJerkMagMean
+                tBodyGyroJerkMagStd
+                fBodyAccMeanX
+                fBodyAccMeanY
+                fBodyAccMeanZ
+                fBodyAccStdX
+                fBodyAccStdY
+                fBodyAccStdZ
+                fBodyAccMeanFreqX
+                fBodyAccMeanFreqY
+                fBodyAccMeanFreqZ
+                fBodyAccJerkMeanX
+                fBodyAccJerkMeanY
+                fBodyAccJerkMeanZ
+                fBodyAccJerkStdX
+                fBodyAccJerkStdY
+                fBodyAccJerkStdZ
+                fBodyAccJerkMeanFreqX
+                fBodyAccJerkMeanFreqY
+                fBodyAccJerkMeanFreqZ
+                fBodyGyroMeanX
+                fBodyGyroMeanY
+                fBodyGyroMeanZ
+                fBodyGyroStdX
+                fBodyGyroStdY
+                fBodyGyroStdZ
+                fBodyGyroMeanFreqX
+                fBodyGyroMeanFreqY
+                fBodyGyroMeanFreqZ
+                fBodyAccMagMean
+                fBodyAccMagStd
+                fBodyAccMagMeanFreq
+                fBodyBodyAccJerkMagMean
+                fBodyBodyAccJerkMagStd
+                fBodyBodyAccJerkMagMeanFreq
+                fBodyBodyGyroMagMean
+                fBodyBodyGyroMagStd
+                fBodyBodyGyroMagMeanFreq
+                fBodyBodyGyroJerkMagMean
+                fBodyBodyGyroJerkMagStd
+                fBodyBodyGyroJerkMagMeanFreq
+                    
+                    
+                    
+                    
+            
+            
+            The run_analysis.R script performs the following steps to clean the data:
+                Read X_train.txt, y_train.txt and subject_train.txt from the "./data/train" folder and store them in trainData, trainLabel and trainSubject variables respectively.
+                Read X_test.txt, y_test.txt and subject_test.txt from the "./data/test" folder and store them in testData, testLabel and testsubject variables respectively.
+                Concatenate testData to trainData to generate a 10299x561 data frame, joinData; concatenate testLabel to trainLabel to generate a 10299x1 data frame, joinLabel; concatenate testSubject to trainSubject to generate a 10299x1 data frame, joinSubject.
         Read the features.txt file from the "/data" folder and store the data in a variable called features. We only extract the measurements on the mean and standard deviation. This results in a 66 indices list. We get a subset of joinData with the 66 corresponding columns.
         Clean the column names of the subset. We remove the "()" and "-" symbols in the names, as well as make the first letter of "mean" and "std" a capital letter "M" and "S" respectively.
         Read the activity_labels.txt file from the "./data"" folder and store the data in a variable called activity.

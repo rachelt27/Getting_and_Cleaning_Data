@@ -1,9 +1,9 @@
-##Code Book: Getting and Cleaning Data Course Project
+#Code Book: Getting and Cleaning Data Course Project
 
 This file describes the variables, the data, and any transformations performed to clean up the data.
 
 
-#The Data
+##The Data
     
     The data was obtained from the following site:
     http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
@@ -12,7 +12,7 @@ This file describes the variables, the data, and any transformations performed t
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
     
     
-#The Variables   
+##The Variables   
  
         Identifiers
                 subject - The ID of the test subject

@@ -1,16 +1,10 @@
 # Getting_and_Cleaning_Data : Course Project
 
 The R script, run_analysis.R, does the following:
-
-  *Downloads the dataset 
-  *Loads the activity and feature info
-  *Loads both the training and test datasets, keeping only those columns which reflect a mean or standard deviation
-  *Loads the activity and subject data for each dataset, and merges those columns with the dataset
-  *Merges the two datasets
-  *Converts the activity and subject columns into factors
-  *Creates a tidy dataset that consists of the average (mean) value of each variable for each subject and activity      pair.
-
-
-Course project of Getting and Cleaning Data offered by Coursera
+* Downloads the dataset from UCI website
+* Loads the feature,subject and activity data for both training and testing.
+* Merges training and testing datasets,keeping only those columns which reflect a mean or standard deviation
+* Adds descriptive names to Activity values.
+* Creates a tidy dataset that consists of the average (mean) value of each variable for each subject and activity      pair.
 
 © Rachel Trimble 2015 All Rights reserved.
